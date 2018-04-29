@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="x2F-sa-V9g">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pW8-Ma-gfS" customClass="RoundedView" customModule="Alert" customModuleProvider="target">
+                                <rect key="frame" x="103" y="321.66666666666669" width="169" height="169"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="4pD-v8-zPR"/>
+                                    <constraint firstAttribute="width" constant="169" id="Ol8-4U-PYx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLx-DK-34t" customClass="RoundedButton" customModule="Alert" customModuleProvider="target">
+                                <rect key="frame" x="97.666666666666686" y="311" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="EaG-x6-Zb7"/>
+                                    <constraint firstAttribute="height" constant="180" id="h4s-Ug-BaK"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="0.0" height="9"/>
+                                <state key="normal" image="panicButton">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="panicPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTo-7m-sDI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEo-jf-Xri" customClass="RoundedButton" customModule="Alert" customModuleProvider="target">
+                                <rect key="frame" x="273" y="61" width="82" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40386879280821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="9iv-fe-1FO"/>
+                                    <constraint firstAttribute="height" constant="40" id="Oef-e2-M6w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mFu-d6-BHL" kind="presentation" id="dJu-c5-qUS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press To Call Police" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mi-Oc-eNZ">
+                                <rect key="frame" x="31.666666666666657" y="504" width="312" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ADw-MD-kbx"/>
+                                    <constraint firstAttribute="width" constant="312" id="rjQ-BN-MQW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALERT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9n-PG-ezx">
+                                <rect key="frame" x="33" y="135" width="308" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="hGy-iO-Dru"/>
+                                    <constraint firstAttribute="width" constant="308" id="uea-qA-Tkr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="88"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wEo-jf-Xri" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="6dF-8I-Rlq"/>
+                            <constraint firstItem="x2F-sa-V9g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="75k-TZ-YTo"/>
+                            <constraint firstItem="x2F-sa-V9g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8nt-qp-gje"/>
+                            <constraint firstItem="6Mi-Oc-eNZ" firstAttribute="top" secondItem="uLx-DK-34t" secondAttribute="bottom" constant="13" id="DeJ-Sq-dVu"/>
+                            <constraint firstItem="uLx-DK-34t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-5" id="H6i-WV-7JY"/>
+                            <constraint firstItem="pW8-Ma-gfS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O2j-xz-h0U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEo-jf-Xri" secondAttribute="trailing" constant="20" id="doe-TI-MOt"/>
+                            <constraint firstItem="uLx-DK-34t" firstAttribute="top" secondItem="c9n-PG-ezx" secondAttribute="bottom" constant="75" id="eas-e7-3G1"/>
+                            <constraint firstItem="pW8-Ma-gfS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h4l-6S-BHx"/>
+                            <constraint firstItem="x2F-sa-V9g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nb9-bP-SiA"/>
+                            <constraint firstItem="uLx-DK-34t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pFK-dV-K02"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x2F-sa-V9g" secondAttribute="bottom" id="pnX-8O-EyQ"/>
+                            <constraint firstItem="c9n-PG-ezx" firstAttribute="centerX" secondItem="uLx-DK-34t" secondAttribute="centerX" id="sO7-le-F7H"/>
+                            <constraint firstItem="6Mi-Oc-eNZ" firstAttribute="centerX" secondItem="uLx-DK-34t" secondAttribute="centerX" id="vkg-my-SnD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ALERTLbl" destination="c9n-PG-ezx" id="X2H-kU-XuZ"/>
+                        <outlet property="panicButton" destination="uLx-DK-34t" id="MMS-hS-okE"/>
+                        <outlet property="panicLbl" destination="6Mi-Oc-eNZ" id="4TD-Ok-aVX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="118.20652173913044"/>
+        </scene>
+        <!--AboutVC-->
+        <scene sceneID="pnH-JN-zbk">
+            <objects>
+                <viewController id="mFu-d6-BHL" customClass="AboutVC" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQ6-99-ecJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F0y-QS-QFv">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-zt-qyS">
+                                <rect key="frame" x="20" y="54" width="335" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="2xO-ah-E3m"/>
+                                </constraints>
+                                <string key="text">This app allows citizens to ensure their safety by giving people the ability to contact emergency services, rather than dialing 911.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simply Launch the App, Press the PANIC ICON which will notify the police in the area that you are in danger." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96h-BW-ozr">
+                                <rect key="frame" x="20" y="194" width="335" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Vpe-C7-Lnp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-i3-cNC">
+                                <rect key="frame" x="20" y="334" width="335" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Auy-Dw-t07"/>
+                                </constraints>
+                                <string key="text">Pop Up message will appear asking if you're ok.  If Victim doesn't respond within one minute, the police will arrive on scene based on your location.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED: Keep locational services on in settings" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8T-A1-arf">
+                                <rect key="frame" x="20" y="474" width="335" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Qkd-Yp-c7f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-bo-Nug" customClass="RoundedButton" customModule="Alert" customModuleProvider="target">
+                                <rect key="frame" x="100" y="698" width="175" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="0.29643485915492956" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="At4-Qu-uTE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="OkPressed:" destination="mFu-d6-BHL" eventType="touchUpInside" id="j27-kH-xav"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N8T-A1-arf" firstAttribute="top" secondItem="CTG-i3-cNC" secondAttribute="bottom" constant="10" id="1nX-lQ-UW4"/>
+                            <constraint firstItem="7fw-bo-Nug" firstAttribute="leading" secondItem="22T-dL-r3r" secondAttribute="leading" constant="100" id="2Sq-v8-TGB"/>
+                            <constraint firstItem="22T-dL-r3r" firstAttribute="bottom" secondItem="7fw-bo-Nug" secondAttribute="bottom" constant="30" id="46N-57-3nY"/>
+                            <constraint firstAttribute="bottom" secondItem="F0y-QS-QFv" secondAttribute="bottom" id="6vb-xW-iho"/>
+                            <constraint firstItem="96h-BW-ozr" firstAttribute="leading" secondItem="22T-dL-r3r" secondAttribute="leading" constant="20" id="BhA-Mi-6DA"/>
+                            <constraint firstItem="F0y-QS-QFv" firstAttribute="top" secondItem="22T-dL-r3r" secondAttribute="top" id="GIR-a4-UBo"/>
+                            <constraint firstItem="CTG-i3-cNC" firstAttribute="leading" secondItem="22T-dL-r3r" secondAttribute="leading" constant="20" id="IhA-9B-JLA"/>
+                            <constraint firstItem="F0y-QS-QFv" firstAttribute="trailing" secondItem="22T-dL-r3r" secondAttribute="trailing" id="McI-UW-Kyg"/>
+                            <constraint firstItem="22T-dL-r3r" firstAttribute="trailing" secondItem="CTG-i3-cNC" secondAttribute="trailing" constant="20" id="Oiw-0I-819"/>
+                            <constraint firstItem="YeL-zt-qyS" firstAttribute="top" secondItem="22T-dL-r3r" secondAttribute="top" constant="10" id="X9V-QR-7Hb"/>
+                            <constraint firstItem="CTG-i3-cNC" firstAttribute="top" secondItem="96h-BW-ozr" secondAttribute="bottom" constant="10" id="YE5-zy-ovP"/>
+                            <constraint firstItem="N8T-A1-arf" firstAttribute="leading" secondItem="22T-dL-r3r" secondAttribute="leading" constant="20" id="bDt-rF-CSf"/>
+                            <constraint firstItem="22T-dL-r3r" firstAttribute="trailing" secondItem="96h-BW-ozr" secondAttribute="trailing" constant="20" id="gWl-tj-lu4"/>
+                            <constraint firstItem="22T-dL-r3r" firstAttribute="trailing" secondItem="7fw-bo-Nug" secondAttribute="trailing" constant="100" id="i4F-v9-SCE"/>
+                            <constraint firstItem="22T-dL-r3r" firstAttribute="trailing" secondItem="YeL-zt-qyS" secondAttribute="trailing" constant="20" id="kvl-3C-tBm"/>
+                            <constraint firstItem="96h-BW-ozr" firstAttribute="top" secondItem="YeL-zt-qyS" secondAttribute="bottom" constant="10" id="pwg-RC-uzp"/>
+                            <constraint firstItem="22T-dL-r3r" firstAttribute="trailing" secondItem="N8T-A1-arf" secondAttribute="trailing" constant="20" id="qrp-Nz-38d"/>
+                            <constraint firstItem="F0y-QS-QFv" firstAttribute="leading" secondItem="22T-dL-r3r" secondAttribute="leading" id="wby-WH-y4B"/>
+                            <constraint firstItem="YeL-zt-qyS" firstAttribute="leading" secondItem="22T-dL-r3r" secondAttribute="leading" constant="20" id="yzp-fa-FFN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="22T-dL-r3r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf1-AI-y0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="640" height="359"/>
+        <image name="panicButton" width="640" height="640"/>
+    </resources>
+</document>
